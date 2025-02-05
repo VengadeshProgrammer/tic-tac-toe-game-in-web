@@ -1,0 +1,758 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Recursive:wght@300..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Recursive:wght@300..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #f7f7f7;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+nav
+{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    width: 100%;
+}
+nav > p
+{
+    font-size: 1.9rem;
+    font-family: "Andika", serif;
+}
+#muteIcon:hover, #websiteIcon:hover, #soundIcon:hover
+{
+    cursor: pointer;
+}
+::selection
+{
+   background-color: transparent;
+}
+.container
+{
+    padding: 16px;
+    position: absolute;
+    width: 100%;
+    height: 91.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.choosePlayerDialogBox
+{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #ffffff;
+    z-index: 1;
+    padding: 16px;
+   border-radius: 5px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Andika', serif;
+    position: absolute;
+}
+.choosePlayerDialogBox.hidden
+{
+    display: none;
+}
+.choosePlayerDialogBox h2
+{
+    font-size: 2rem;
+}
+.choosePlayerDialogBox #players
+{
+    padding-top: 32px;
+}
+.choosePlayerDialogBox #players img:hover
+{
+    cursor: pointer;
+    transition: .5s;
+    animation-name: shakeHoverPlayerChoose;
+    animation-timing-function: ease-in;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+}
+main
+{
+    width: 600px;
+    height: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top:20px;
+}
+main.blur
+{
+    filter: blur(10px);
+}
+main div
+{
+    color: #f7f7f7;
+    width: 600px;
+    height:200px;
+}
+main .row1
+{
+    display: flex;
+    flex-direction: row;
+}
+main .row2
+{
+    display: flex;
+    flex-direction: row;
+}
+main .row3
+{
+    display: flex;
+    flex-direction: row;
+}
+main .row1 div:nth-child(2)
+{
+  border-width: 0 2px 2px 2px;
+  border-style: solid;
+  border-color: black;
+}
+main .row2 div:nth-child(2)
+{
+  border-width: 0 2px 2px 2px;
+  border-style: solid;
+  border-color: black;
+}
+main .row2 div:nth-child(3)
+{
+  border-width: 2px 0 2px 0;
+  border-style: solid;
+  border-color: black;
+}
+main .row2 div:nth-child(1)
+{
+  border-width: 2px 0 2px 0;
+  border-style: solid;
+  border-color: black;
+}
+main .row3 div:nth-child(2)
+{
+  border-width: 0 2px 0 2px;
+  border-style: solid;
+  border-color: black;
+}
+main .row1 div:hover
+{
+    cursor: pointer;
+    background-color: white;
+}
+main .row2 div:hover
+{
+    cursor: pointer;
+    background-color: white;
+}
+main .row3 div:hover
+{
+    cursor: pointer;
+    background-color: white;
+}
+#playerLabel
+{
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+}
+.soundIcons
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.soundIcons #muteIcon
+{
+    z-index: -1;
+    opacity: 0;
+}
+.soundIcons #soundIcon
+{
+    position: absolute;
+}
+.boxCrossPlayer.hidden
+{
+    opacity: 0;
+}
+.boxOPlayer.hidden
+{
+    opacity: 0;
+}
+div[id*="box"]
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+div[id*="box"] img
+{
+    position: absolute;
+}
+.container.blinkGreen{
+    animation-name: blinkGreen;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+.container.blinkRed{
+    animation-name: blinkRed;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+.container.blinkGrey{
+    animation-name: blinkGrey;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+@keyframes blinkGreen {
+    0%
+    {
+        background-color: rgb(128, 255, 0);
+        color: white;
+    };
+    100%
+    {
+        background-color: white;
+        color: black;
+    }
+}
+.gameOver
+{
+    z-index: 1;
+    opacity: 1;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #ffffff;
+    padding: 16px;
+   border-radius: 5px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Andika', serif;
+    position: absolute;
+    height: 225px;
+    transform: translateY(0px);
+    transition: opacity 1s;
+}
+.gameOver p
+{
+    font-weight: bolder;
+    font-size: 3rem;
+}
+.gameOver .tryAgain
+{
+    background-color: #FFA500;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    padding: 20px;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 5px;
+}
+.gameOver .tryAgain:hover
+{
+    transition: opacity .5s;
+    cursor: pointer;
+    opacity: .8;
+}
+.gameWon
+{
+    opacity: 1;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #ffffff;
+    z-index: 1;
+    padding: 16px;
+   border-radius: 5px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Andika', serif;
+    transform: translateY(0px);
+    position: absolute;
+    height: 225px;
+    transition: all 1s;
+}
+.gameOver.hidden
+{
+    opacity: 0;
+    transform: translateY(600px);
+}
+.gameWon.hidden
+{
+    opacity: 0;
+    transform: translateY(600px);
+}
+.gameWon p
+{
+    font-weight: bolder;
+    font-size: 3rem;
+}
+.gameWon .restart
+{
+    background-color: #32CD32;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 9px 0px;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    padding: 20px;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 5px;
+}
+.gameWon .restart:hover
+{
+    transition: all .5s;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 9px 5px;
+    cursor: pointer;
+    opacity: .8;
+}
+
+.gameTie
+{
+    opacity: 1;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #ffffff;
+    z-index: 1;
+    padding: 16px;
+   border-radius: 5px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Andika', serif;
+    transform: translateY(0px);
+    position: absolute;
+    height: 225px;
+    transition: all 1s;
+}
+.gameTie.hidden
+{
+    opacity: 0;
+    transform: translateY(600px);
+}
+.gameTie p
+{
+    font-weight: bolder;
+    font-size: 3rem;
+}
+.gameTie .tryAgain
+{
+    background-color: #32CD32;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 9px 0px;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    padding: 20px;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 5px;
+}
+.restartBtn
+{
+    background-color: #808080;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 9px 0px;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    padding: 20px;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 5px;
+    font-family: 'Andika';
+}
+.restartBtn.broken
+{
+    opacity: .5;
+}
+.restartBtn.broken:hover
+{
+    cursor: not-allowed;
+}
+.restartBtn:hover
+{
+    cursor: pointer;
+}
+.gameTie .tryAgain:hover
+{
+    transition: all .5s;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 9px 5px;
+    cursor: pointer;
+    opacity: .8;
+}
+.btns
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    top: 10px;
+}
+.closeBtnWon
+{
+    font-size: 2rem;
+    background: transparent;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    border: none;
+}
+.closeBtnWon.active
+{
+    opacity: 1;
+}
+.closeBtnWon:hover
+{
+    cursor: pointer;
+    opacity: .7;
+}
+.closeBtnOver
+{
+    font-size: 2rem;
+    background: transparent;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    border: none;
+}
+.closeBtnOver.active
+{
+    opacity: 1;
+}
+.closeBtnOver:hover
+{
+    cursor: pointer;
+    opacity: .7;
+}
+.closeBtnTie
+{
+    font-size: 2rem;
+    background: transparent;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    border: none;
+}
+.closeBtnTie.active
+{
+    opacity: 1;
+}
+.closeBtnTie:hover
+{
+    cursor: pointer;
+    opacity: .7;
+}
+.tryAgainTie
+{
+    background-color: #FFA500;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    padding: 20px;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 5px;
+}
+.tryAgainTie:hover
+{
+    transition: opacity .5s;
+    cursor: pointer;
+    opacity: .8;
+}
+@keyframes blinkRed {
+    0%
+    {
+        background-color: rgb(255, 77, 77);
+        color: white;
+    };
+    100%
+    {
+        background-color: white;
+        color: black;
+    }
+}
+@keyframes blinkGrey {
+    0%
+    {
+        background-color: grey;
+        color: white;
+    };
+    100%
+    {
+        background-color: white;
+        color: black;
+    }
+}
+@keyframes shakeHoverPlayerChoose
+{
+    0%{
+        transform: translateX(15px);
+    }
+    50%
+    {
+        transform: translateX(-15px);
+    }
+}
+
+@media (max-width:667px) and (min-width:524px)
+{
+    main
+    {
+        margin-top: 40px;
+        width: 450px;
+        height: 600px;
+    }
+    nav
+    {
+        padding: 0 50px;
+        width: 100%;
+    }
+    main div
+{
+    color: #f7f7f7;
+    width: 450px;
+    height:200px;
+}
+nav > p
+{
+    font-size: 1.7rem;
+    font-family: "Andika", serif;
+}
+.gameOver
+{
+    min-width: 300px;
+}
+.gameWon
+{
+    min-width: 300px;
+}
+.gameTie
+{
+    min-width: 300px;
+}
+}
+@media (max-width:523px) and (min-width:462px)
+{
+    main
+    {
+        margin-top: 40px;
+        width: 450px;
+        height: 600px;
+    }
+    nav
+    {
+        padding: 0 50px;
+        width: 100%;
+    }
+    main div
+{
+    color: #f7f7f7;
+    width: 450px;
+    height:200px;
+}
+nav > p
+{
+    font-size: 1.7rem;
+    font-family: "Andika", serif;
+}
+.gameOver
+{
+    min-width: 300px;
+}
+.gameWon
+{
+    min-width: 300px;
+}
+.gameTie
+{
+    min-width: 300px;
+}
+}
+@media (max-width:458px) and (min-width:400px)
+{
+    main
+    {
+        margin-top: 40px;
+        width: 400px;
+        height: 600px;
+    }
+    nav
+    {
+        padding: 0 0px;
+        width: 100%;
+    }
+    main div
+{
+    color: #f7f7f7;
+    width: 400px;
+    height:200px;
+}
+nav > p
+{
+    font-size: 1.6rem;
+    font-family: "Andika", serif;
+}
+.gameOver
+{
+    min-width: 300px;
+}
+.gameWon
+{
+    min-width: 300px;
+}
+.gameTie
+{
+    min-width: 300px;
+}
+}
+@media (max-width:399px) and (min-width:380px)
+{
+    main
+    {
+        margin-top: 40px;
+        width: 395px;
+        height: 600px;
+    }
+    nav
+    {
+        padding: 0 0px;
+        width: 100%;
+    }
+    main div
+{
+    color: #f7f7f7;
+    width: 395px;
+    height:200px;
+}
+nav > p
+{
+    font-size: 1.5rem;
+    font-family: "Andika", serif;
+}
+.restartBtn
+{
+    font-size: 1rem;
+    padding: 20px;
+}
+.gameOver
+{
+    width: 100%;
+}
+.gameWon
+{
+    width: 100%;
+}
+.gameTie
+{
+    width: 100%;
+}
+}
+@media (max-width:379px) and (min-width:360px)
+{
+    main
+    {
+        margin-top: 40px;
+        width: 365px;
+        height: 600px;
+    }
+    nav
+    {
+        padding: 0 0px;
+        width: 100%;
+    }
+    main div
+{
+    color: #f7f7f7;
+    width: 365px;
+    height:200px;
+}
+nav > p
+{
+    font-size: 1.5rem;
+    font-family: "Andika", serif;
+}
+.restartBtn
+{
+    font-size: 1rem;
+    padding: 20px;
+}
+.gameOver
+{
+    width: 100%;
+}
+.gameWon
+{
+    width: 100%;
+}
+.gameTie
+{
+    width: 100%;
+}
+}
+@media (max-width:359px) and (min-width:347px)
+{
+    main
+    {
+        margin-top: 40px;
+        width: 345px;
+        height: 600px;
+    }
+    nav
+    {
+        padding: 0 0px;
+        width: 100%;
+    }
+    main div
+{
+    color: #f7f7f7;
+    width: 345px;
+    height:200px;
+}
+nav > p
+{
+    font-size: 1.5rem;
+    font-family: "Andika", serif;
+}
+.restartBtn
+{
+    font-size: 1rem;
+    padding: 20px;
+}
+.gameOver
+{
+    width: 100%;
+}
+.gameWon
+{
+    width: 100%;
+}
+.gameTie
+{
+    width: 100%;
+}
+}

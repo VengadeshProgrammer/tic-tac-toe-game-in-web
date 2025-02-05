@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✅ TicTacToe ❌</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- 2,868 lines of code -->
+    <nav id="nav">
+        <img src="/assets/tictaktoe icon.png" alt="websiteIcon" id="websiteIcon" width="100">
+        <p>Tic Tac Toe</p>
+        <div class="soundIcons">
+        <svg fill="#000000" width="50" viewBox="-1.5 0 19 19" xmlns="http://www.w3.org/2000/svg" id="muteIcon"><path d="M7.676 4.938v9.63c0 .61-.353.756-.784.325l-2.896-2.896H2.02A1.111 1.111 0 0 1 .911 10.89V8.618a1.112 1.112 0 0 1 1.108-1.109h1.977l2.896-2.896c.43-.43.784-.284.784.325zm7.251 6.888a.554.554 0 1 1-.784.784l-2.072-2.073-2.073 2.073a.554.554 0 1 1-.784-.784l2.073-2.073L9.214 7.68a.554.554 0 0 1 .784-.783L12.07 8.97l2.072-2.073a.554.554 0 0 1 .784.783l-2.072 2.073z"/></svg>
+        <svg width="45" viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg" id="soundIcon">
+            <path d="M16 9C16.5 9.5 17 10.5 17 12C17 13.5 16.5 14.5 16 15M19 6C20.5 7.5 21 10 21 12C21 14 20.5 16.5 19 18M13 3L7 8H5C3.89543 8 3 8.89543 3 10V14C3 15.1046 3.89543 16 5 16H7L13 21V3Z"  stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="choosePlayerDialogBox">
+            <h2>Choose a <span style="color: #80FF00;">P</span>laye<span style="color: #FF4D4D;">r</span>!</h2>
+            <div id="players">
+                <img src="/assets/cross.png" alt="playerCross" width="100" id="choosePlayerCross">
+                <img src="/assets/o.png" alt="playerO" width="100" id="choosePlayerO">
+            </div>
+        </div>
+        <div class="gameOver hidden">
+            <button class="closeBtnOver">✕</button>
+            <p style="color: #FF4D4D;">You Lost! 😔</p>
+            <button class="tryAgain">⟲ Try Again</button>
+        </div>
+        <div class="gameWon hidden">
+            <button class="closeBtnWon">✕</button>
+            <p style="color: #80FF00;">You Won! 😍</p>
+            <button class="restart">⟲ Restart</button>
+        </div>
+        <!-- ⟲ -->
+        <div class="gameTie hidden">
+            <button class="closeBtnTie">✕</button>
+            <p style="color: #808080;">Game Tie! 😑</p>
+            <button class="tryAgainTie">⟲ TryAgain</button>
+        </div>
+        <div class="btns">
+        <section id="playerLabel"></section>
+        <section class="restartBtn broken">⟲ Restart</section>
+        </div>
+        <main class="blur">
+            <div class="row1">
+            <div id="box1"></div>
+            <div id="box2"></div>
+            <div id="box3"></div>
+        </div>
+            <div class="row2">
+            <div id="box4"></div>
+            <div id="box5"></div>
+            <div id="box6"></div>
+        </div>
+        <div class="row3">
+            <div id="box7"></div>
+            <div id="box8"></div>
+            <div id="box9"></div>
+        </div>
+        </main>
+    </div>
+    <script src="/src/isTie.js"></script>
+    <script src="/src/detectPlayerWin.js"></script>
+    <script src="/src/winningMoves.js"></script>
+    <script src="/src/advanceTechniques.js"></script>
+    <script src="/src/basicTechniques.js"></script>
+    <script src="/src/placeOpponent.js"></script>
+    <script src="/src/board.js"></script>
+    <script src="/src/main.js"></script>
+</body>
+</html>
