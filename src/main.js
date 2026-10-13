@@ -22,11 +22,11 @@ window.addEventListener("load", ()=>{
     const wonBox = document.querySelector(".gameWon");
     const tieBox = document.querySelector(".gameTie");
     var stop = false;
-    const gameClickSound = new Audio('/assets/musics/select-sound-121244.mp3');
-    const gameOverSound = new Audio('/assets/musics/game-over-arcade-6435.mp3');
-    const gameStartSound = new Audio('/assets/musics/game-start-6104.mp3');
-    const gameWonSound = new Audio('/assets/musics/game-level-complete-143022.mp3');
-    const gameTieSound = new Audio('/assets/musics/game-tie.mp3');
+    const gameClickSound = new Audio('../assets/musics/select-sound-121244.mp3');
+    const gameOverSound = new Audio('../assets/musics/game-over-arcade-6435.mp3');
+    const gameStartSound = new Audio('../assets/musics/game-start-6104.mp3');
+    const gameWonSound = new Audio('../assets/musics/game-level-complete-143022.mp3');
+    const gameTieSound = new Audio('../assets/musics/game-tie.mp3');
     choosePlayerCrossBtn.addEventListener("click", ()=>{
         choosePlayerDialogBox.classList.toggle("hidden");
         main.classList.remove("blur");
@@ -38,9 +38,9 @@ window.addEventListener("load", ()=>{
     choosePlayerOByn.addEventListener("click", ()=>{
         choosePlayerDialogBox.classList.toggle("hidden");
         main.classList.remove("blur");
-        const gameStartSound = new Audio('/assets/musics/game-start-6104.mp3'); // Replace with your sound file
+        const gameStartSound = new Audio('../assets/musics/game-start-6104.mp3'); // Replace with your sound file
         gameStartSound.play(); 
-        userPlayer = "/assets/o.png";
+        userPlayer = "../assets/o.png";
         fillBoxesWithPlayers();
         showPlayersLabel();
     });
@@ -68,10 +68,10 @@ window.addEventListener("load", ()=>{
           if(box.id!="")
           {
             box.innerHTML=`
-            <img src="/assets/redWinLine.png" alt="boxCrossPlayer" width="15" height="200" class="boxCrossPlayer hidden">
-            <img src="/assets/greenWinLine.png" alt="boxCrossPlayer" width="15" height="200" class="boxCrossPlayer hidden">
-            <img src="/assets/cross.png" alt="boxCrossPlayer" width="150" class="boxCrossPlayer hidden">
-            <img src="/assets/o.png" alt="boxOPlayer" width="150" class="boxOPlayer hidden">`;
+            <img src="../assets/redWinLine.png" alt="boxCrossPlayer" width="15" height="200" class="boxCrossPlayer hidden">
+            <img src="../assets/greenWinLine.png" alt="boxCrossPlayer" width="15" height="200" class="boxCrossPlayer hidden">
+            <img src="../assets/cross.png" alt="boxCrossPlayer" width="150" class="boxCrossPlayer hidden">
+            <img src="../assets/o.png" alt="boxOPlayer" width="150" class="boxOPlayer hidden">`;
           };
         });
     };
@@ -86,19 +86,19 @@ window.addEventListener("load", ()=>{
       {
         clickedDiv = e.target;
       }
-      const gameClickSound = new Audio('/assets/musics/select-sound-121244.mp3'); // Replace with your sound file
+      const gameClickSound = new Audio('../assets/musics/select-sound-121244.mp3'); // Replace with your sound file
       gameClickSound.play(); 
       showPlayer(clickedDiv);
     });
     function chooseOppPlayer()
     {
-      if(userPlayer=="/assets/cross.png")
+      if(userPlayer=="../assets/cross.png")
         {
-            oppPlayer = "/assets/o.png";
+            oppPlayer = "../assets/o.png";
         }
         else
         {
-            oppPlayer = "/assets/cross.png";
+            oppPlayer = "../assets/cross.png";
         }
     }; 
     function randomSpan()
