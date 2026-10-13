@@ -31,7 +31,7 @@ window.addEventListener("load", ()=>{
         choosePlayerDialogBox.classList.toggle("hidden");
         main.classList.remove("blur");
         gameStartSound.play(); 
-        userPlayer = "/assets/cross.png";
+        userPlayer = "../assets/cross.png";
         fillBoxesWithPlayers();
         showPlayersLabel();
     });
