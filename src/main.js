@@ -75,21 +75,18 @@ window.addEventListener("load", ()=>{
           };
         });
     };
-    main.addEventListener("click",e=>{
-        // Get the choosen div
-        let clickedDiv;
-      if(e.target.tagName=="IMG")
-      {
-        clickedDiv = e.target.closest("div");
-      }
-      else if(e.target.id.includes("box"))
-      {
-        clickedDiv = e.target;
-      }
-      const gameClickSound = new Audio('../assets/musics/select-sound-121244.mp3'); // Replace with your sound file
-      gameClickSound.play(); 
-      showPlayer(clickedDiv);
-    });
+   
+main.addEventListener("click", e => {
+    const clickedDiv = e.target.closest("#box1, #box2, #box3, #box4, #box5, #box6, #box7, #box8, #box9");
+
+    if (!clickedDiv) return;
+
+    gameClickSound.currentTime = 0;
+    gameClickSound.play().catch(console.error);
+
+    showPlayer(clickedDiv);
+});
+
     function chooseOppPlayer()
     {
       if(userPlayer=="../assets/cross.png")
