@@ -19,13 +19,13 @@ class WinningMove
 
     checkVerticalL(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
       if(board.opponentScoreBoard.includes(7))
         {
@@ -45,13 +45,13 @@ class WinningMove
 
     checkVerticalLViseVersa(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
       if(board.opponentScoreBoard.includes(1))
         {
@@ -71,13 +71,13 @@ class WinningMove
 
     checkVerticalLCenter(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
       if(board.opponentScoreBoard.includes(4))
         {
@@ -97,13 +97,13 @@ class WinningMove
 
     checkVerticalRCenter(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
       if(board.opponentScoreBoard.includes(6))
         {
@@ -123,13 +123,13 @@ class WinningMove
 
     checkVerticalRViseVersa(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
       if(board.opponentScoreBoard.includes(3))
         {
@@ -149,13 +149,13 @@ class WinningMove
 
     checkVerticalR(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
       if(board.opponentScoreBoard.includes(9))
         {
@@ -175,13 +175,13 @@ class WinningMove
 
     checkVerticalC(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
       if(board.opponentScoreBoard.includes(8))
         {
@@ -201,13 +201,13 @@ class WinningMove
 
     checkVerticalCViseVersa(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
       if(board.opponentScoreBoard.includes(2))
         {
@@ -227,13 +227,13 @@ class WinningMove
 
     checkVerticalCCenter(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
       if(board.opponentScoreBoard.includes(5))
         {
@@ -254,13 +254,13 @@ class WinningMove
     //Horizontal
     checkHorizontalT(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
       if(board.opponentScoreBoard.includes(3))
         {
@@ -280,13 +280,13 @@ class WinningMove
 
     checkHorizontalTViseVersa(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
       if(board.opponentScoreBoard.includes(1))
         {
@@ -306,13 +306,13 @@ class WinningMove
 
     checkHorizontalTCenter(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
       if(board.opponentScoreBoard.includes(2))
         {
@@ -332,13 +332,13 @@ class WinningMove
 
     checkHorizontalC(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
       if(board.opponentScoreBoard.includes(6))
         {
@@ -358,13 +358,13 @@ class WinningMove
 
     checkHorizontalCViseVersa(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
       if(board.opponentScoreBoard.includes(4))
         {
@@ -384,13 +384,13 @@ class WinningMove
 
     checkHorizontalCCenter(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
       if(board.opponentScoreBoard.includes(5))
         {
@@ -410,13 +410,13 @@ class WinningMove
 
     checkHorizontalB(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
       if(board.opponentScoreBoard.includes(9))
         {
@@ -436,13 +436,13 @@ class WinningMove
 
     checkHorizontalBViseVersa(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
       if(board.opponentScoreBoard.includes(7))
         {
@@ -462,13 +462,13 @@ class WinningMove
 
     checkHorizontalBCenter(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
       if(board.opponentScoreBoard.includes(8))
         {
@@ -489,13 +489,13 @@ class WinningMove
     //diagonal
     checkLRDiagonal(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
         if(board.opponentScoreBoard.includes(9))
           {
@@ -515,13 +515,13 @@ class WinningMove
 
     checkLRDiagonalViseVersa(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
         if(board.opponentScoreBoard.includes(3))
           {
@@ -541,13 +541,13 @@ class WinningMove
 
     checkLRDiagonalCenter(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
         if(board.opponentScoreBoard.includes(5))
           {
@@ -567,13 +567,13 @@ class WinningMove
 
     checkRLDiagonal(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
         if(board.opponentScoreBoard.includes(7))
           {
@@ -593,13 +593,13 @@ class WinningMove
 
     checkRLDiagonalViseVersa(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
         if(board.opponentScoreBoard.includes(1))
           {
@@ -619,13 +619,13 @@ class WinningMove
 
     checkRLDiagonalCenter(board, userPlayer)
     {
-        if(userPlayer=="/assets/cross.png")
+        if(userPlayer=="../assets/cross.png")
             {
-                this.oppPlayer = "/assets/o.png";
+                this.oppPlayer = "../assets/o.png";
             }
             else
             {
-                this.oppPlayer = "/assets/cross.png";
+                this.oppPlayer = "../assets/cross.png";
             }
         if(board.opponentScoreBoard.includes(5))
           {
